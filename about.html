@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <meta name="description" content="당산 룸싸롱 추천! 완전 핫한 분위기와 찐친 같은 서비스, 가성비까지 챙긴 당산 룸싸롱. 010-6279-0862로 지금 바로 콜! 형님들 여기 딱이에요.">
+    <meta name="keywords" content="당산 룸싸롱, 당산 룸싸롱 추천, 당산 술집, 당산 유흥, 룸싸롱, 당산 회식">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kr-pbn-sr-041.vercel.app">
+    <meta property="og:title" content="당산 룸싸롱 추천 No.1 | 찐 형님들 인정한 핫플">
+    <meta property="og:description" content="당산 룸싸롱 추천! 완전 핫한 분위기와 찐친 같은 서비스, 가성비까지 챙긴 당산 룸싸롱. 010-6279-0862로 지금 바로 콜! 형님들 여기 딱이에요.">
+    <title>당산 룸싸롱 추천 | 정보</title>
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #f7e05e;
+            text-shadow: 4px 4px 0 #000;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            border-left: 6px solid #f7e05e;
+            padding-left: 1rem;
+            margin: 2rem 0 1rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        a {
+            color: #f7e05e;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #f7e05e;
+        }
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* SKEWED ROTATED ELEMENTS */
+        .skew-box {
+            background: #2a2a2a;
+            transform: skew(-3deg);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 8px solid #f7e05e;
+        }
+        .skew-box h2 {
+            transform: skew(3deg);
+            border-left: none;
+            padding-left: 0;
+        }
+        /* HEADER & NAV */
+        header {
+            background: #0d0d0d;
+            padding: 1rem 0;
+            border-bottom: 4px solid #f7e05e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f7e05e;
+            text-transform: uppercase;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        .hamburger-menu span {
+            width: 30px;
+            height: 4px;
+            background: #f7e05e;
+            margin: 4px 0;
+            display: block;
+            transition: 0.3s;
+        }
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        nav a {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: none;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .tel-link {
+            display: inline-block;
+            background: #f7e05e;
+            color: #1a1a1a !important;
+            padding: 0.5rem 1.2rem;
+            font-weight: bold;
+            border: 3px solid #1a1a1a;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+        .tel-link:hover {
+            background: #fff;
+            color: #1a1a1a !important;
+        }
+        /* HERO */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: radial-gradient(circle at 20% 30%, #2a2a2a, #111);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 1rem auto;
+        }
+        .hero .tel-link {
+            font-size: 1.5rem;
+            padding: 1rem 2.5rem;
+            margin-top: 1.5rem;
+        }
+        /* INFO SECTION */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .info-card {
+            background: #222;
+            padding: 2rem;
+            border: 3px solid #333;
+            transform: rotate(-1deg);
+            transition: 0.3s;
+        }
+        .info-card:nth-child(even) {
+            transform: rotate(1deg);
+        }
+        .info-card:hover {
+            border-color: #f7e05e;
+            transform: rotate(0deg) scale(1.02);
+        }
+        .info-card h3 {
+            color: #f7e05e;
+            margin-top: 0;
+        }
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-card ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #444;
+        }
+        .info-card ul li::before {
+            content: "► ";
+            color: #f7e05e;
+        }
+        /* DETAIL SECTION */
+        .detail-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .detail-item {
+            flex: 1 1 300px;
+            background: #1f1f1f;
+            padding: 1.5rem;
+            border-left: 4px solid #f7e05e;
+        }
+        /* CTA BANNER */
+        .cta-banner {
+            background: #f7e05e;
+            color: #1a1a1a;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            transform: skew(-4deg);
+        }
+        .cta-banner * {
+            transform: skew(4deg);
+        }
+        .cta-banner h2 {
+            border: none;
+            padding: 0;
+            margin: 0 0 1rem;
+            color: #1a1a1a;
+        }
+        .cta-banner .tel-link {
+            background: #1a1a1a;
+            color: #f7e05e !important;
+            border-color: #f7e05e;
+            font-size: 1.3rem;
+        }
+        .cta-banner .tel-link:hover {
+            background: #333;
+        }
+        /* FAQ */
+        .faq {
+            margin: 3rem 0;
+        }
+        .faq-item {
+            border-bottom: 2px solid #333;
+            padding: 1.5rem 0;
+        }
+        .faq-item h3 {
+            color: #f7e05e;
+            cursor: pointer;
+        }
+        .faq-item p {
+            margin-top: 0.5rem;
+        }
+        /* FOOTER */
+        footer {
+            background: #0d0d0d;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 4px solid #f7e05e;
+            margin-top: 4rem;
+        }
+        footer .tel-link {
+            margin: 1rem 0;
+        }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #0d0d0d;
+                padding: 1rem 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                text-align: center;
+                gap: 1rem;
+            }
+            nav.active {
+                display: flex;
+            }
+            .header-inner {
+                flex-wrap: wrap;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .detail-item {
+                flex: 1 1 100%;
+            }
+            .cta-banner {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="logo">당산룸싸롱</div>
+            <button class="hamburger-menu" aria-label="메뉴 열기" onclick="document.querySelector('nav').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/about">소개</a>
+                <a href="/info">정보</a>
+                <a href="/review">후기</a>
+                <a href="/contact">연락처</a>
+                <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>당산 룸싸롱 추천<br>진짜 정보만 쏙쏙</h1>
+            <p>형님들이 원하는 모든 것! 위치, 가격, 분위기, 서비스까지 다 알려준다. 이거 보면 당산에서 제일 핫한 룸싸롱 바로 찾는다니까?</p>
+            <a href="tel:01062790862" class="tel-link">📞 지금 전화 걸기</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>📍 당산 룸싸롱 완전 정복</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>위치 & 접근성</h3>
+                <ul>
+                    <li>당산역 3번 출구 도보 3분</li>
+                    <li>단체 주차 가능 (발렛 무료)</li>
+                    <li>지하철 막차 시간까지 충분</li>
+                    <li>택시 잡기 쉬운 위치</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>가격 & 시스템</h3>
+                <ul>
+                    <li>1인 평균 15~25만 원대</li>
+                    <li>병 서비스 무료 (선착순)</li>
+                    <li>노타임 시스템 (시간 제한 X)</li>
+                    <li>신용카드 OK, 현금 할인</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>분위기 & 인테리어</h3>
+                <ul>
+                    <li>스트릿 브루탈리즘 감성</li>
+                    <li>방마다 다른 테마</li>
+                    <li>최신 음향 & 조명 시스템</li>
+                    <li>흡연실 완비</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h3>서비스 & 아가씨</h3>
+                <ul>
+                    <li>20대 초중반 라인업</li>
+                    <li>2:1 시스템 가능</li>
+                    <li>VIP 룸 별도</li>
+                    <li>안주 퀄리티 미슐랭급</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="skew-box">
+            <h2>🔥 형님들 여기 왜 꿀인지 알려줌</h2>
+            <p>솔직히 당산에 룸싸롱 많잖아? 근데 여기는 분위기가 완전 다르다니까? 들어가자마자 느껴지는 그 감성. 스트릿 브루탈리즘 인테리어에 조명 빛이 미쳤어. 게다가 아가씨들도 친절하고 술도 맛있고. 내가 진짜 여러 군데 가봤는데, 여기만 한 데가 없음. 특히 회식 자리로 딱이야. 형들이랑 단톡방에 바로 공유해도 손색없는 곳!</p>
+            <p><strong>전화 한 통이면 모든 게 해결된다니까? 010-6279-0862로 지금 바로 콜!</strong></p>
+        </div>
+
+        <h2>📋 상세 정보 한눈에</h2>
+        <div class="detail-box">
+            <div class="detail-item">
+                <h3>영업 시간</h3>
+                <p>월~토: 20:00 ~ 익일 05:00<br>일요일: 20:00 ~ 03:00<br>연중무휴 (명절에도 문 연다)</p>
+            </div>
+            <div class="detail-item">
+                <h3>예약 방법</h3>
+                <p>전화 예약: 010-6279-0862<br>문자/카톡 예약 가능<br>현장 예약도 OK (주말은 필수 예약)</p>
+            </div>
+            <div class="detail-item">
+                <h3>특별 이벤트</h3>
+                <p>매주 수요일: 여성 우대 이벤트<br>매월 마지막 금요일: 와인 데이<br>생일자 무료 서비스 (사전 예약 필수)</p>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <h2>지금 전화하면 깜짝 혜택!</h2>
+            <p>초행 손님 환영! 첫 방문 시 하우스 와인 1병 무료 증정. 형님들 여기 오면 후회 없어. 내가 보증한다니까?</p>
+            <a href="tel:01062790862" class="tel-link">📞 010-6279-0862</a>
+        </div>
+
+        <h2>❓ 자주 묻는 질문</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <h3>Q. 예약 없이 가도 되나요?</h3>
+                <p>평일에는 워크인 가능한데 주말에는 무조건 예약이 좋아. 대기 시간 길어질 수 있음. 전화 주면 바로바로 안내해줌.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 단체 손님도 받나요?</h3>
+                <p>당연하지! 10명 이상 단체도 환영. 최대 30명까지 수용 가능하니까 회식, 모임 장소로 딱이야. 단체 예약 시 추가 서비스도 있음.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 주차는 어떻게 해요?</h3>
+                <p>건물 전용 주차장 있고, 발렛도 무료야. 차량 대수 많으면 미리 말해주면 자리 확보해줌. 걱정 마!</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q. 아가씨 라인업은 어떤가요?</h3>
+                <p>20대 초중반 위주로 정말 예쁜 아가씨들만 모셔놨어. 취향에 맞게 추천도 해주니까 전화 주면 자세히
+</body>
+</html>
